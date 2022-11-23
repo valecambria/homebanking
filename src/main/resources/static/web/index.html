@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito&family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+</head>
+<body>
+        <header class="fixed-top">
+          <nav class="navbar navbar-dark">
+            <div class="container-fluid" id="navColors">
+              <div>
+                <a class="navbar-brand fw-bolder" id="bankTitle" href="#"><img class="bankLogoIMG" src="./assets/finanArgLogo.png" alt="bank logo"></a>
+              </div>
+            <div class="navTitles d-flex gap-5 ">
+                <a class="navbar-brand" id="navTitles" href="#">Home</a>
+                <a class="navbar-brand" id="navTitles" href="./login.html">Sign In</a>
+                <a class="navbar-brand" id="navTitles" href="./register.html">Sign Up</a>
+            </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" id="hamburguerMenuButton">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header" id="hamMenu1">
+                <span class="material-symbols-outlined mt-2 fs-2">
+                    account_balance
+                </span>
+            <h5 class="offcanvas-title ps-3 fs-3 fw-bolder" id="offcanvasDarkNavbarLabel">FinanArg</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" id="hamMenu2">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 gap-2" id="textMenu">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./login.html">Sign In</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./register.html">Sign Up</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+        </header>
+        <main id="landingMain">
+          <div class="d-flex justify-content-center flex-column">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-indicators" id="carouselButton">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" id="carouselImg">
+                      <div class="carousel-caption d-flex justify-content-center flex-column mb-5" id="landingTexts">
+                        <h2>As a FinanArg client, ¡you have many benefits!</h2>
+                        <p>Enjoy the upcoming summer with the best promotions... ¿What are you waiting for?</p>
+                        <div>
+                          <a class="pb-2 text-white btn btn-primary" href="" role="button">Become a client</a>
+                        </div>
+                      </div>
+                    <img src="./assets/cajero.jpg" class="d-block w-100" alt="ATM">
+                  </div>
+                  <div class="carousel-item" id="carouselImg">
+                    <div class="carousel-caption d-flex justify-content-center flex-column mb-5" id="landingTexts">
+                      <h2>Start saving for something great.</h2>
+                      <p>Find the savings account to help you reach your goals.</p>
+                      <div>
+                        <a class="pb-2 text-white btn btn-danger" href="" role="button">Apply now</a>
+                      </div>
+                    </div>
+                    <img src="./assets/dmitry-demidko-eBWzFKahEaU-unsplash.jpg" class="d-block w-100" alt="Money">
+                  </div>
+                  <div class="carousel-item" id="carouselImg">
+                    <div class="carousel-caption d-flex justify-content-center flex-column mb-5" id="landingTexts">
+                      <h2 class="">Life insurance</h2>
+                      <p class="">Let us help you choose between term and permanent life insurance options that meet your unique needs.</p>
+                      <div>
+                        <a class="btnLifeInsurance pb-2 text-white btn btn-info" href="" role="button">Learn more about life insurance</a>
+                      </div>
+                    </div>
+                    <img src="./assets/bankatm.avif" class="d-block w-100" alt="ATM">
+                  </div>
+                  <div class="carousel-item" id="carouselImg">
+                    <div class="carousel-caption d-flex justify-content-center flex-column mb-5" id="landingTexts">
+                      <h2>Capital to fuel your growth and operations</h2>
+                      <p class="largeText">Position your organization for growth and maximize stakeholder return with the right capital and debt structure. We can help you navigate the financial complexities of M&A and business expansion, and offer expert guidance on how to maximize your capital for ongoing operations.</p>
+                      <div>
+                        <a class="pb-2 text-blue btn btn-primary" href="#" role="button">Request a call</a>
+                      </div>
+                    </div>
+                    <img src="./assets/banks.avif" class="d-block w-100" alt="Bank building photo">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <div class="infoCards d-flex align-self-center flex-column animate__animated animate__fadeInUp">
+                <h3 class="text-center">Borrowing money is a big deal. We're ready to help.</h3>
+                <p class="text-center">From calculators and rate charts to get you started, to experienced loan officers and bankers, FinanArg has answers for all your loan and mortgage questions.</p>
+              </div>
+                <div class="dataLanding d-flex justify-content-between mt-5 mb-5 animate__animated animate__fadeInUp">
+                  <div class="cardsLanding d-flex align-items-center flex-column">
+                    <img src="./assets/landingbank1.png" alt="house">
+                    <div class="cardsLandingTexts d-flex flex-column gap-3">
+                      <h4 class="text-white fw-bold">Home mortgage</h4>
+                      <a class="text-white" href="">Learn More ></a>
+                      <a class="text-white" href="">Calculate your mortgage payment</a>
+                    </div>
+                  </div>
+                  <div class="cardsLanding d-flex align-items-center flex-column">
+                    <img src="./assets/landingbank2.png" alt="car">
+                    <div class="cardsLandingTexts d-flex flex-column gap-3">
+                      <h4 class="text-white fw-bold">Auto loan</h4>
+                      <a class="text-white" href="">Learn More ></a>
+                      <a class="text-white" href="">Calculate your auto loan payment</a>
+                    </div>
+                  </div>
+                  <div class="cardsLanding d-flex align-items-center flex-column">
+                    <img src="./assets/landingbank3.png" alt="security">
+                    <div class="cardsLandingTexts d-flex flex-column gap-3">
+                      <h4 class="text-white fw-bold">Home equity line of credit</h4>
+                      <a class="text-white" href="">Learn More ></a>
+                      <a class="text-white" href="">Calculate your home equity rates</a>
+                    </div>
+                  </div>
+                </div>
+              <div id="bankApp" class="ps-5" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-white fw-bolder">Access us wherever you go.</h2>
+                <div class="d-flex">
+                  <img class="mobileImg" src="./assets/Mobile Phone_Monochromatic.png" alt="">
+                  <div class="d-flex flex-column">
+                  <h5 class="text-white pt-5">Bank from almost anywhere with the FinanArg Mobile App.</h5>
+                  <p class="text-white"><span class="material-symbols-outlined pt-3">
+                    swap_horiz
+                    </span>
+                    Transfer money between your accounts.</p>
+                  <p class="text-white"><span class="material-symbols-outlined">
+                    account_balance_wallet
+                    </span> Deposit checks.</p>
+                  <p class="text-white"><span class="material-symbols-outlined">
+                    receipt
+                    </span> Manage and pay bills.</p>
+                  <p class="text-white"><span class="material-symbols-outlined">
+                    attach_money
+                    </span> Send, receive and request money.</p>
+                </div>
+                </div>
+              </div>
+              <div class="pb-5" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="fs-1 ps-5 pb-3 text-white fw-bolder" id="news">News & stories</h2>
+                <div class="d-flex justify-content-evenly" id="newsStories">
+                <div class="text-white" id="newsLanding">
+                  <h3 >News from FinanArg.</h3>
+                  <p>Read the latest updates from our bank.</p>
+                  <a class="text-white" href="#">Get informed ></a>
+                </div>
+                <div class="text-white" id="newsLanding">
+                  <h3>Stories from FinanArg.</h3>
+                  <p>Enjoy heartening stories and get some feel-good motivation.</p>
+                  <a class="text-white" href="#">Be inspired ></a>
+                </div>
+                <div class="text-white" id="newsLanding">
+                  <h3>Tips from Financial IQ.</h3>
+                  <p>Find strategies for your personal and business finances.</p>
+                  <a class="text-white" href="#">Explore solutions ></a>
+                </div>
+              </div>
+              </div>
+            </div>
+        </main>
+        <footer class="d-flex align-items-end">
+            <div class="footerimg mt-2">
+              <p class="text-secondary mt-2 ps-1">Download our app now on</p>
+              <a href="https://www.apple.com/la/app-store/" target="_blank"><img src="./assets/appstore-removebg-preview.png" alt="app store logo"></a> 
+              <a href="https://play.google.com/store/games?hl=es_AR&gl=US" target="_blank"><img src="./assets/googleplay.png" alt=""></a>
+            </div>
+              <div class="d-flex justify-content-center align-items-center flex-column" id="info">
+                  <p class="fw-bolder ps-2" id="bankTitle">FinanArg</p>
+                  <div class="footerColor d-flex gap-3">
+                      <a href="#">Legal advice</a>
+                      <p>|</p>
+                      <a href="#">Map</a>
+                      <p>|</p>
+                      <a href="#">Security recommendations</a>
+                  </div>
+              </div>
+          </footer>
+          <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+    crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+AOS.init();
+    </script>
+</body>
+</html>

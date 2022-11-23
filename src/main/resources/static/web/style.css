@@ -1,0 +1,1010 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: solid 1px red; */
+}
+body{
+    font-family: 'Roboto Mono', monospace;
+}
+header{
+    height: 12vh;
+background: rgb(2,0,36);
+background: linear-gradient(34deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 78%, rgba(0,48,255,1) 100%);
+}
+#navColors a{
+    color:white;
+}
+#bankTitle{
+    font-size: 30px;
+}
+.navTitles{
+    font-size: 20px;
+}
+.navTitles a[href="#"]{
+    border-bottom: solid 2px white;
+}
+#hamMenu1{
+    background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(5,5,111,1) 52%, rgba(23,49,161,1) 100%);
+    border-bottom: solid 2px white ;
+}
+#hamMenu2{
+    background: rgb(2,0,36);
+background: linear-gradient(180deg, rgb(3, 3, 95) 0%, rgba(5,5,111,1) 52%, rgba(23,49,161,1) 100%);    
+}
+#colorSubmit{
+    background-color: rgb(47, 47, 207);
+    color: white;
+}
+#inputSearch{
+    background-color:rgba(23,49,161,1);
+}
+#textMenu a:hover{
+    border-bottom: solid 1px white;
+    width: fit-content;
+}
+main{
+    min-height: 75vh;
+    background-image: url(./assets/bankwallpaper.2.jpg);
+    background-size: cover;
+}
+#landingMain{
+    min-height: 75vh;
+    background: rgb(0, 1, 1);
+    background: linear-gradient(180deg, rgba(20,25,126,1) 0%, rgba(27,126,209,1) 100%);
+}
+.bankLogoIMG{
+    height: 5rem;
+}
+#mainAccounts{
+    min-height: 75vh;
+}
+#mainCards{
+    min-height: 75vh;
+    background-image: url(./assets/bankwallpaper.webp);
+}
+#transfersMain{
+    min-height: 75vh;
+    background-image: url(./assets/transfersBackground.jpg);
+    background-position: -14rem;
+    background-position-y: 20rem;
+}
+#loansMain{
+    background-image: url(./assets/loansWallpaper.jpg);
+}
+#createLoanMain{
+    min-height: 88vh;
+    background-image: url(./assets/761.jpg);
+    background-position-y: center;
+}
+.accountsMain{
+    width: 95%;
+    height: 35rem;
+    background: rgba( 7, 31, 100, 0.8 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    border-radius: 10px;
+/*     background: rgb(2,0,36);
+    background: linear-gradient(133deg, rgb(3, 0, 49) 0%, rgba(5,5,111,1) 87%, rgba(23,49,161,1) 100%); */
+    border-radius: .5rem;
+}
+.accountsMainCards{
+    width: 80%;
+    height: max-content;
+    background: rgba( 7, 31, 100, 0.8 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    border-radius: 10px;
+    border-radius: .5rem;
+}
+.card {
+    width: 25%;
+    height: 40%;
+    background-image: url(./assets/account3.jpg);
+    display: flex;
+    place-content: center;
+    place-items: center;
+    border-radius: 20px;
+    border-color: 2px solid white;
+    box-shadow: 0px 7px 12px 6px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 0px 7px 12px 6px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 7px 12px 6px rgba(0,0,0,0.55);
+}  
+.card:hover{
+    transform: scale(1.05) !important; 
+    box-shadow: none;
+}
+
+.cardContent{
+    height: 100%;
+}
+#borderCard{
+    border-bottom: 1px solid rgb(113, 110, 110);
+    height: fit-content;
+}   
+#borderCard2{
+    border-top: 1px solid rgb(113, 110, 110);
+    height: fit-content;
+} 
+.creationDate{
+    color: rgb(131, 131, 131);
+}
+.typeOfCards{
+    color: aqua;
+    text-shadow: -4px 5px 1px rgba(0,0,0,0.6);
+}
+.texto{
+    height: fit-content;
+    color: #98a5c0;
+}
+.saludo{
+    display: inline;
+}
+#carouselExampleCaptions{
+    height: 30rem;
+}
+#carouselImg img{
+    height: 30rem !important;
+    object-fit: cover;
+}
+#carouselButton button{
+    width: 5rem !important;
+    height: .5rem !important;
+}
+
+#landingTexts{
+    background-color: white;
+    height: 38%;
+    color: rgb(0, 0, 0);
+    border-radius: 1rem;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 15.5px );
+    -webkit-backdrop-filter: blur( 15.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+#hamburguerMenuButton{
+    visibility: hidden;
+}
+.infoCards{
+    height: fit-content;
+    width: 100%;
+    color: white;
+    padding-top: 6rem;
+}
+.dataLanding{
+    width: 100%;
+}
+.cardsLanding{
+    width: 33.33%;
+}
+.cardsLanding img{
+    width: 70%;
+    border-radius: 1rem;
+    opacity: 70%;
+}
+.cardsLandingTexts{
+    text-align: center;
+}
+#bankApp{
+    padding-bottom: 10rem;
+}
+#newsLanding{
+    width: 30%;
+}
+#news{
+    border-top: solid 1px rgb(130, 130, 130);
+}
+footer{
+    height: 13vh;
+    background: rgb(2,0,36);
+background: linear-gradient(133deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 78%, rgba(0,48,255,1) 100%);
+}
+footer p{
+    color:white;
+}
+.footerColor a{
+    text-decoration: none;
+    border: none;
+    color: aqua;
+}
+.footerimg{
+    width: 40%;
+}
+.footerimg img{
+    width: 15%;
+}
+#loansTable{
+    width: 25%;
+    height: 40%;
+    background-image: url(./assets/account3.jpg);
+    border-radius: 10px;
+    place-content: center;
+    place-items: center;
+    box-shadow: -9px 8px 12px 6px rgba(0,0,0,0.55);
+-webkit-box-shadow: -9px 8px 12px 6px rgba(0,0,0,0.55);
+-moz-box-shadow: -9px 8px 12px 6px rgba(0,0,0,0.55);
+}
+#loansTable:hover{
+    transform: scale(1.08) !important;
+    box-shadow: none;
+}
+#tableCaptionLoans{
+    font-size: large;
+    padding-left: 5px;
+    border-bottom:  1px solid grey !important;    
+}
+.cardClient{
+    width: 400px;
+    height: 250px;
+      -webkit-perspective: 700px;
+      -moz-perspective: 700px;
+      perspective:700px;
+      
+    }
+    
+    .card__part{
+      box-shadow: 1px 1px #aaa3a3;
+        top: 0;
+      position: absolute;
+    z-index: 1000;
+      left: 0;
+      display: inline-block;
+      width: 400px;
+      height: 250px;
+        background-image: url('https://image.ibb.co/bVnMrc/g3095.png');
+        background: rgb(189,151,27);
+        background: linear-gradient(87deg, rgba(189,151,27,1) 38%, rgba(222,184,58,1) 90%);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 8px;
+        -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -moz-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -ms-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+    }
+    .SILVER{
+          background: rgb(116,116,116);
+          background: linear-gradient(153deg, rgba(116,116,116,1) 23%, rgba(142,142,142,1) 43%, rgba(161,161,161,1) 64%, rgba(226,226,226,1) 90%);
+      }
+
+    .TITANIUM{
+          background: rgb(191,191,191);
+          background: linear-gradient(153deg, rgba(191,191,191,1) 23%, rgba(233,233,233,1) 43%, rgba(244,244,244,1) 64%, rgba(226,226,226,1) 90%);
+      }
+    
+    .card__front{
+      padding: 18px;
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    }
+    
+    .card__back {
+      padding: 18px 0;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    }
+    
+    .card__black-line {
+        margin-top: 5px;
+        height: 38px;
+        background-color: #303030;
+    }
+    
+    .card__logo {
+        height: 16px;
+    }
+    
+    .card__front-logo{
+          position: absolute;
+        top: 18px;
+        right: 18px;
+    }
+    .card__square {
+        border-radius: 5px;
+        height: 30px;
+    }
+    
+    .card_numer {
+        display: block;
+        width: 100%;
+        word-spacing: 4px;
+        font-size: 20px;
+        letter-spacing: 2px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    .card__space-75 {
+        width: 75%;
+        float: left;
+    }
+    
+    .card__space-25 {
+        width: 25%;
+        float: left;
+    }
+    
+    .card__label {
+        font-size: 10px;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.8);
+        letter-spacing: 1px;
+    }
+    
+    .card__info {
+        margin-bottom: 0;
+        margin-top: 5px;
+        font-size: 12px;
+        line-height: 18px;
+        color: #fff;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    
+    .card__back-content {
+        padding: 15px 15px 0;
+    }
+    .card__secret--last {
+        color: #303030;
+        text-align: right;
+        margin: 0;
+        font-size: 14px;
+    }
+    
+    .card__secret {
+        padding: 5px 12px;
+        background-color: #fff;
+        position:relative;
+    }
+    
+    .card__secret:before{
+      content:'';
+      position: absolute;
+    top: -3px;
+    left: -3px;
+    height: calc(100% + 6px);
+    width: calc(100% - 42px);
+    border-radius: 4px;
+      background: repeating-linear-gradient(45deg, #ededed, #ededed 5px, #f9f9f9 5px, #f9f9f9 10px);
+    }
+    
+    .card__back-logo {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .card__back-square {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    .cardClient:hover .card__front {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+    
+    }
+    
+    .cardClient:hover .card__back {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+    }
+    
+    #addAccountButton{
+        height: 3rem;
+        width: 9rem;
+    }
+    .addAccountButton{
+        height: fit-content;
+    }
+
+    .formCards{
+        height: 80rem;
+        width: 60rem;
+       /*  border: 1px red solid; */
+    }
+    .imgFormCards{
+        height: 40%;
+        width:100%;
+        background-position: center;
+        background-size: cover;
+        background-image: url(./assets/cardsForm.jpg);
+        border-radius: 5px;
+    }
+    .imgFormCards2{
+        height: 40%;
+        width:100%;
+        background-position: center;
+        background-size: cover;
+        background-image: url(./assets/money.jpg);
+        border-radius: 5px;
+    }
+    .imgFormCards3{
+        height: 40%;
+        width:100%;
+        background-position: center;
+        background-size: cover;
+        background-image: url(./assets/loan.jpg);
+        border-radius: 5px;
+    }
+    .textImgCards{
+        background: rgba( 38, 79, 177, 0.55 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 14px );
+        -webkit-backdrop-filter: blur( 14px );
+        border-radius: 10px;
+        width: 100%;
+    }
+    .textFormCards{
+        height: 25%;
+        width: 100%;
+        background: rgba( 7, 31, 100, 0.55 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 8px );
+        -webkit-backdrop-filter: blur( 8px );
+        border-radius: 10px;
+    }
+    .textFormCards2{
+        height: 55%;
+        width: 100%;
+        background: rgba( 7, 31, 100, 0.55 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 8px );
+        -webkit-backdrop-filter: blur( 8px );
+        border-radius: 10px;
+    }
+    .textFormCards3{
+        height: 60%;
+        width: 100%;
+        background: rgba( 7, 31, 100, 0.55 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 8px );
+        -webkit-backdrop-filter: blur( 8px );
+        border-radius: 10px;
+    }
+    
+    #selectLabel{
+        width: 30%;
+    }
+    .createCardButton{
+        width: 100%;
+    }
+    .transferButton{
+        width:100% ;
+    }
+    .btnContainer{
+        height: fit-content;
+        width: fit-content;
+    }
+    .applyBtn{
+        width:fit-content;
+        height: fit-content;
+        margin-top: 1.5rem;
+    }
+    .loanModal{
+        width: fit-content;
+        height: fit-content;
+    }
+    .textsLoan{
+        width: fit-content;
+    }
+    .textAmount{
+        visibility: hidden;
+    }
+    .textAccount{
+        text-shadow: -4px 2px 12px rgba(0,0,0,0.85);
+        text-decoration: underline;
+    }
+    .btnShadow{
+        box-shadow: 2px 15px 18px 2px rgba(0,0,0,0.42);
+        -webkit-box-shadow: 2px 15px 18px 2px rgba(0,0,0,0.42);
+        -moz-box-shadow: 2px 15px 18px 2px rgba(0,0,0,0.42);
+    }
+    #btnShadow{
+        width: fit-content;
+        box-shadow: -1px 7px 34px -4px rgba(255,255,255,0.67);
+        -webkit-box-shadow: -1px 7px 34px -4px rgba(255,255,255,0.67);
+        -moz-box-shadow: -1px 7px 34px -4px rgba(255,255,255,0.67);
+    }
+    #greeting{
+        position: absolute;
+        top: 15rem;
+    }
+    .createLoanForm{
+        height: 50rem;
+        width: 50vw;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 7px );
+        -webkit-backdrop-filter: blur( 7px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+    .createLoanText{
+        text-shadow: 4px 4px 2px rgba(0,0,0,0.72);
+    }
+    @media screen and (min-width:1025px) {
+        .accountsMain{
+            margin-bottom: 1rem;
+        }
+        .card{
+            height: 40%;
+            width: 40%;
+        }
+        #loansTable{
+            height: 40%;
+            width: 40%;
+        }
+        #landingTexts{
+            height: 60%;
+        }
+    }
+@media screen and (max-width: 1024px) {
+    .card{
+        height: 40%;
+        width: 40%;
+    }
+    #landingTexts{
+        height: 60%;
+    }
+    #loansTable{
+        height: 40%;
+        width: 40%;
+    }
+    .accountsMain{
+        margin-bottom: 1rem;
+    }
+    .accountsMainCards{
+        height: 55rem;
+        margin-bottom: 1rem;
+    }
+    .addAccountButton{
+        padding-right: 2rem !important;
+    }
+    
+}
+@media screen and (max-width: 1000px) {
+    .formCards{
+        width: 70%;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    header{
+        height: 13vh;
+    }
+    .footerimg{
+        display: none;
+    }
+    #info{
+        width: 100%;
+    }
+    .card{
+        width: 40%;
+        height: 47%;
+        flex-direction: column;
+    }
+    .texto{
+        padding-left: 1rem !important;
+        font-size: medium !important;
+    }
+    #landingTexts h2{
+        font-size: large;
+        font-weight: bolder;
+    }
+    #loansTable{
+        width: 42%;
+    }
+    .addAccountButton{
+        padding-right: 1.5rem !important;
+    }
+    .accountsMain{
+        height: fit-content;
+    }
+    .accountsMainCards{
+        height: fit-content;
+    }
+    .formCards{
+        width: 85%;
+    }
+    .createCardButton{
+        margin-top: 1rem !important;
+    }
+    .dataLanding{
+        width: 100%;
+        padding-top: 1rem;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .cardsLanding img{
+        width: 30rem;
+    }
+
+    @media screen and (max-width: 425px) {
+        #bankTitle{
+            font-size: 30px;
+            padding-left: 8rem;
+        }
+        .navTitles{
+            gap: 0 !important;
+            visibility: hidden;
+        }
+
+        #hamburguerMenuButton{
+            visibility: visible;
+            position: absolute;
+            right: 10px;
+            bottom: 25px;
+        }
+        .accountsMain{
+            padding-left: 1rem !important;
+            height: 75% !important;
+            margin-bottom: 1rem !important;
+        }
+        .card{
+            width: 74%;
+            height: 35%;
+            margin-right: 1rem;
+            margin-top: .5rem;
+        }
+        .cardClient{
+            width: 350px;
+            margin-right: .7rem !important;
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+        }
+        .card__part{
+            width: 350px;
+        }
+        .card__part2{
+            width: 350px;
+        }
+        .card__part3{
+            width: 350px;
+        }
+        #loansTable{
+            width: 74%;
+            height: 35%;
+            margin-right: 1rem;
+            margin-bottom: .5rem !important;
+        }
+        .footerColor{
+            padding-left: 1rem;
+        }
+        .infoCards h3{
+            font-size: large;
+        }
+        .infoCards p {
+            font-size: small;
+        }
+        #bankApp{
+            padding: .5rem !important;
+        }
+        #landingTexts{
+            font-size: smaller;
+            height: 60%;
+        }
+        .cardsLanding img{
+            width: 20rem;
+        }
+        .cardsLanding h4{
+            font-size: x-large;
+        }
+        .cardsLanding a{
+            font-size: small;
+        }
+        .dataLanding{
+            padding-top: 1rem;
+        }
+        #infoCardsLanding h4{
+            font-size: medium;
+        }
+        #infoCardsLanding{
+            font-size: small;
+        }
+        #newsStories{
+            flex-direction: column;
+            align-items: center;
+        }
+        .mobileImg{
+            width: 30%;
+            height: 30%;
+        }
+        #newsLanding{
+            width: 100%;
+            padding-left: 1rem;
+            padding-bottom: .5rem;
+        }
+        #newsLanding h3{
+            font-size:20px !important;
+            font-weight: bolder;
+        }
+        .tableCaption{
+            text-align: center;
+        }
+        #accountsFooter{
+            padding-top: 1rem !important;
+        }
+        .addAccountButton{
+            padding-right: 1rem !important;
+        }
+        .greeting{
+            margin-top: 2rem !important;
+        }
+        .accountsMainCards{
+            height: fit-content;
+            padding-left: 1rem;
+        }
+        .btnLifeInsurance{
+            width: 90%;
+        }
+        .largeText{
+            display: none;
+        }
+        .tableLoans{
+            display: none;
+        }
+        .textAmount{
+            visibility: visible;
+        }
+        .table>:not(caption)>*>*{
+            border: none !important;
+        }
+        html, body{
+            width:100%;
+            overflow-x:hidden;
+            }
+
+    }
+    @media screen and (max-width: 375px) {
+        .card{
+            width: 84%;
+            height: 35%;
+        }
+        .cardClient{
+            width: 330px;
+            margin-right: .7rem !important;
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+        }
+        .card__part{
+            width: 330px;
+        }
+        .card__part2{
+            width: 330px;
+        }
+        .card__part3{
+            width: 330px;
+        }
+        #loansTable{
+            width: 84%;
+            height: 35%;
+        }
+        #bankTitle{
+            font-size: 30px;
+            padding-left: 6.5rem;
+        }
+        .navTitles{
+            gap: 0 !important;
+        }
+        #navTitles{
+            font-size: medium !important;
+        }
+        .creationDate{
+            font-size: small;
+        }
+        .footerColor a{
+            font-size: small;
+        }
+        #landingTexts p{
+            display: none;
+        }
+        #landingTexts{
+            height: 40%;
+        }
+        #newsLanding h3{
+            font-size: medium;
+        }
+        .tableCaption{
+            text-align: center;
+        }
+        #greeting{
+            font-size: x-large;
+            text-align: center;
+            padding-left: .5rem;
+        }
+
+    }
+    @media screen and (max-width: 320px) {
+        #bankTitle{
+            font-size: 30px;
+            padding-left: 5rem;
+            text-align: center;
+        }
+        .card{
+            width: 84%;
+            height: 45%;
+        }
+        .cardClient{
+            width: 280px;
+            height: 280px;
+            margin-right: .7rem !important;
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+        }
+        .cardsLanding img{
+            width: 17rem;
+        }
+        .accountsMainCards{
+            height: 50rem;
+            width: 100%;
+            gap: 1rem !important;
+        }
+        .card__part{
+            width: 280px;
+            height: 290px;
+        }
+        .card__part2{
+            width: 280px;
+            height: 290px;
+        }
+        .card__part3{
+            width: 280px;
+            height: 290px;
+        }
+        #borderCard{
+            font-size: small;
+        }
+        .footerColor{
+            padding-left: 1rem;
+        }
+        .creationDate{
+            font-size: smaller;
+        }
+        #greeting{
+            font-size: large;
+            text-align: center;
+            padding-left: .5rem;
+        }
+        .tableCaption{
+            font-size: small;
+            text-align: center;
+        }
+        #tableTexts{
+            font-size: small;
+        }
+        .textFormCards3{
+            height: fit-content;
+        }
+        .textsLoan{
+            text-align: center;
+        }
+        .tableLoans{
+            flex-direction: column;
+        }
+        .buttonCards{
+            margin-bottom: 3rem;
+        }
+    }
+    @media screen and (min-width:321px) {
+        #loansTable{
+            width: fit-content;
+        }
+        .card__part{
+            width: 95%;
+            height: 117%;
+        }
+        .card__part2{
+            width: 95%;
+            height: 117%;
+        }
+        .card__part3{
+            width: 95%;
+            height: 117%;
+        }
+        .accountsMainCards{
+            height: 50rem;
+            gap: 1rem !important;
+        }
+        .textsLoan{
+            text-align: center;
+        }
+        .accountTable{
+            font-size: small !important;
+        }
+        .buttonCards{
+            margin-bottom: 3rem;
+        }
+    }
+    @media screen and (min-width: 426px){
+        .card{
+            width: 74%;
+            height: 40%;
+            margin-right: 1rem;
+            margin-top: .5rem;
+        }
+        #loansTable{
+            width: 74%;
+            height: 40%;
+            margin-right: 1rem;
+            margin-bottom: .5rem !important;
+        }
+        .table>:not(caption)>*>*{
+            border: none !important;
+        }
+        .navTitles{
+            gap: 0 !important;
+            visibility: hidden;
+        }
+        .cardsLanding img{
+            width: 20rem;
+        }
+        #hamburguerMenuButton{
+            visibility: visible;
+            position: absolute;
+            right: 10px;
+            bottom: 25px;
+        }
+        .btnLifeInsurance{
+            width: 90%;
+        }
+        .largeText{
+            display: none;
+        }
+        .textsLoan{
+            text-align: center;
+        }
+        .tableLoans{
+            display: none;
+        }
+        .textAmount{
+            visibility: visible;
+        }
+        html, body{
+            width:100%;
+            overflow-x:hidden;
+            }
+    }
+    @media screen and (min-width: 465px){
+        .btnLifeInsurance{
+            width: 90%;
+        }
+        .textsLoan{
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width:1022px) {
+    #navTitles{
+        visibility: hidden;
+    }
+    #hamburguerMenuButton{
+        visibility: visible;
+        position: absolute;
+        right: 10px;
+        bottom: 35px;
+    }
+    .table>:not(caption)>*>*{
+        border: none !important;
+    }
+    html, body{
+        width:100%;
+        overflow-x:hidden;
+        }
+}

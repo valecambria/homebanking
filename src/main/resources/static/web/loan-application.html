@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for a loan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito&family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <nav class="navbar navbar-dark">
+                <div class="container-fluid" id="navColors">
+                    <div>
+                        <a class="navbar-brand fw-bolder" id="bankTitle" href="#"><img class="bankLogoIMG" src="./assets/finanArgLogo.png" alt="bank logo"></a>
+                      </div>
+                    <div class="navTitles d-flex gap-5 ">
+                        <a class="navbar-brand" id="navTitles" href="./index.html">Home</a>
+                        <a class="navbar-brand" id="navTitles" href="./accounts.html">My Account</a>
+                        <a class="navbar-brand" id="navTitles" href="./cards.html">My Cards</a>
+                        <a class="navbar-brand" id="navTitles" href="./transfers.html">Transfer</a>
+                        <a class="navbar-brand" id="navTitles" href="#">Loans</a>
+                        <a class="navbar-brand" id="navTitles" @click.prevent="logout" href="">Log Out</a>
+                    </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" id="hamburguerMenuButton">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header" id="hamMenu1">
+                    <span class="material-symbols-outlined mt-2 fs-2">
+                        account_balance
+                    </span>
+                <h5 class="offcanvas-title ps-3 fs-3 fw-bolder" id="offcanvasDarkNavbarLabel">FinanArg</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="hamMenu2">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 gap-2" id="textMenu">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./accounts.html">My Accounts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./cards.html">My Cards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./transfers.html">Transfer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Loans</a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" @click.prevent="logout" href="#">Logout</a>
+                    </li>
+                </ul>
+                </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="d-flex justify-content-center" id="loansMain">
+            <div class="formCards d-flex align-self-center mt-3 mb-3 flex-column">
+                <div class="imgFormCards3 d-flex align-items-end justify-content-center pb-3">
+                    <div class="textImgCards text-center pb-2 text-white fw-bold">
+                        <h2>You are about to apply for a loan.</h2>
+                        <p>Please, complete the following form to apply.</p>
+                    </div>
+                </div>
+                <div class="textFormCards3 d-flex flex-column align-items-center">
+                    <form @submit.prevent="confirmationAlert" class="d-flex flex-column align-items-center">
+                        <h2 class="text-center text-white pt-3">Select the type of loan.</h2>
+                        <fieldset class="border-none text-center text-white-50">
+                            <label class="fs-4 pe-5">
+                                Mortgage
+                                <input v-model="loanOption" class="input1" type="radio" name="loanType" :value="mortgageId">
+                            </label>
+                            <label class="fs-4 pe-5">
+                                Personal
+                                <input v-model="loanOption" class="input1" type="radio" name="loanType" :value="personalId">
+                            </label>
+                            <label class="fs-4 pe-5">
+                                Vehicle
+                                <input v-model="loanOption" class="input1" type="radio" name="loanType" :value="vehicleId">
+                            </label>
+                        </fieldset>
+                        <fieldset v-if="loanOption != ''" class="textsLoan d-flex flex-column align-items-center pt-5">
+                            <label for="payments" class="fs-4 text-white fw-bold">Select how many payments you want:</label>
+                                <select v-if="loanOption == 9" name="payments" class="text-center" v-model="payments" id="selectLabel">
+                                    <option v-for="payment in mortgagePayments" :value="payment">{{payment}}</option>
+                                </select>
+                                <select v-if="loanOption == 10" name="payments" class="text-center" v-model="payments" id="selectLabel">
+                                    <option v-for="payment in personalPayments" :value="payment">{{payment}}</option>
+                                </select>
+                                <select v-if="loanOption == 11" name="payments" class="text-center" v-model="payments" id="selectLabel">
+                                    <option v-for="payment in vehiclePayments" :value="payment">{{payment}}</option>
+                                </select>
+                        </fieldset>
+                        <fieldset v-if="payments != ''" class="textsLoan d-flex flex-column align-items-center pt-5">
+                            <label for="amount" class="fs-4 text-white fw-bold d-flex flex-column align-items-center">Please, choose the amount you want:</label>
+                            <label class="fs-5 text-white fw-bold">
+                                $
+                                <input type="number" name="amount" v-model="loanAmount">
+                            </label>
+                        </fieldset>
+                        <fieldset v-if="loanAmount != ''" class="textsLoan d-flex flex-column align-items-center pt-5">
+                            <label for="account" class="fs-4 text-white fw-bold d-flex flex-column align-items-center">Choose the destinatary account:</label>
+                            <select name="account" class="text-center" v-model="loanDestinataryAccount">
+                                <option v-for="account in activeAccounts" :value="account.number">{{account.number}}</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="textsLoan d-flex justify-content-center">
+                                <div v-if="loanDestinataryAccount != ''" class="tableLoans mt-5">
+                                    <table class="table table-bordered table-responsive">
+                                        <thead class="text-white" id="tableTexts">
+                                            <th scope="col">Type</th>
+                                            <th scope="col">Payments</th>
+                                            <th scope="col">Amount</th>
+                                            <th scope="col">Destinatary Account</th>
+                                            <th scope="col">Amount per payment</th>
+                                        </thead>
+                                        <tbody class="text-white" id="tableTexts">
+                                            <tr>
+                                                <td class="text-center">{{loanOption}}</td>
+                                                <td class="text-center">{{payments}}</td>
+                                                <td class="text-center">${{loanAmount}}</td>
+                                                <td class="text-center">{{loanDestinataryAccount}}</td>
+                                                <td class="text-center" >${{paymentsCalc()}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> 
+                        </fieldset>
+                        <fieldset class="textAmount">
+                            <div v-if="loanDestinataryAccount != ''">
+                                <h5 class="text-white mt-4 text-center">Amount per payment: ${{paymentsCalc()}}</h5>
+                            </div>
+                        </fieldset>
+                    <div class="d-flex justify-content-center mb-3">
+                        <button type="submit" class="createCardButton btn btn-primary mt-5">Apply</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer class="d-flex align-items-end" id="accountsFooter">
+            <div class="footerimg mt-2 ps-2">
+                <p class="text-secondary mt-2 ps-1">Download our app now on</p>
+                <a href="https://www.apple.com/la/app-store/" target="_blank"><img src="./assets/appstore-removebg-preview.png" alt="app store logo"></a> 
+                <a href="https://play.google.com/store/games?hl=es_AR&gl=US" target="_blank"><img src="./assets/googleplay.png" alt=""></a>
+            </div>
+                <div class="d-flex justify-content-center align-items-center flex-column" id="info">
+                    <p class="fw-bolder ps-2" id="bankTitle">FinanArg</p>
+                    <div class="footerColor d-flex gap-3">
+                        <a href="#">Legal advice</a>
+                        <p>|</p>
+                        <a href="#">Map</a>
+                        <p>|</p>
+                        <a href="#">Security recommendations</a>
+                    </div>
+                </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./loan-applications.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

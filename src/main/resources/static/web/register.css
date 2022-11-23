@@ -1,0 +1,357 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+/*     border: 1px solid red; */
+}
+body{
+    font-family: 'Roboto Mono', monospace;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+}
+.area{
+    background: rgb(0, 1, 1);
+    background: linear-gradient(180deg, rgba(20,25,126,1) 0%, rgba(27,126,209,1) 100%); 
+    width: 100%;
+    height:100%;
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+/* .loginImg{
+    width: 33rem;
+} */
+.bankLogoIMGLogin{
+    width: 15%;
+}
+.bankLogoIMGRegister{
+    width: 60%;
+}
+html, body{
+    width:100%;
+    overflow-x:hidden;
+    overflow-y: hidden;
+    }
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 80%;
+    width: fit-content;
+    display: inline;
+}
+
+.screen {		
+    background: rgb(0, 1, 1);
+    background: linear-gradient(180deg, rgba(20,25,126,1) 0%, rgba(27,126,209,1) 100%);		
+	position: relative;	
+	height: 600px;
+	width: 450px;	
+	box-shadow: 0px 0px 24px #5C5696;
+}
+
+.screen__content {
+	z-index: 1;
+	position: relative;	
+	height: 100%;
+    width: 100%;
+}
+
+.screen__background {		
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);	
+}
+
+.screen__background__shape {
+	transform: rotate(45deg);
+	position: absolute;
+}
+
+.screen__background__shape1 {
+	height: 520px;
+	width: 520px;
+	background: #FFF;	
+	top: -50px;
+	right: 120px;	
+	border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+	height: 220px;
+	width: 220px;
+	background: rgba(255, 255, 255, 0.2);	
+	top: -172px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen__background__shape3 {
+	height: 540px;
+	width: 190px;
+	background: rgba(255, 255, 255, 0.2);
+	top: -24px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen__background__shape4 {
+	height: 400px;
+	width: 200px;
+	background: rgba(255, 255, 255, 0.2);
+	top: 420px;
+	right: 50px;	
+	border-radius: 60px;
+}
+
+.login {
+	width: 320px;
+	padding: 30px;
+	padding-top: 156px;
+}
+.register {
+	width: 320px;
+	padding: 30px;
+	padding-top: 60px;
+}
+
+.login__field {
+	padding: 20px 0px;	
+	position: relative;	
+}
+
+.login__icon {
+	position: absolute;
+	top: 30px;
+	color: #7875B5;
+}
+
+.login__input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: #1f24bc;
+    border-radius: 29px;
+    background: linear-gradient(225deg, #cacaca, #f0f0f0);
+    box-shadow:  -28px 28px 55px #5a5a5a,
+                28px -28px 55px #ffffff;
+}
+
+.login__submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #3b40d3;
+	box-shadow: 0px 10px 10px #1363ad6a;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	border-color: #6A679E;
+	outline: none;
+    border-radius: 23px;
+background: #e0e0e0;
+box-shadow: inset -9px -9px 7px #8d8d8d,
+            inset 9px 9px 7px #ffffff;
+}
+
+.button__icon {
+	font-size: 24px;
+	margin-left: auto;
+	color: #7875B5;
+}
+
+.social-login {	
+	position: absolute;
+	height: 140px;
+	width: 220px;
+	text-align: center;
+	bottom: 0px;
+	right: 7.5rem;
+}
+.social-login a{
+	color: rgb(146, 243, 248);
+    font-weight: bolder;
+    font-size: x-large;
+    text-decoration: none;
+
+}
+
+@media screen and (max-width:768px) {
+    .circles{
+        display: none;
+    }
+    .bankLogoIMGLogin{
+        width: 35%;
+    }
+    .bankLogoIMGRegister{
+        width: 60%;
+    }
+    html, body{
+        width:100%;
+        overflow-x:hidden;
+        }
+}
+@media screen and (max-width:425px) {
+    .circles{
+        display: none;
+    }
+    .container{
+        width: 100%;
+        height:80%;
+    }
+    .social-login{
+        padding-left: 2.5rem;
+    }
+    @media screen and (max-width:375px) {
+        .social-login{
+            left:2rem;
+        }
+    }
+
+    @media screen and (max-width:320px) {
+        .screen{
+            width: 300px;
+        }
+        .social-login{
+            left:1rem;
+        }
+    }
+}
